@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="role" namespace="/" extends="intercptor">
+		<action name="roleAction_*" method="{1}" class="roleAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/privilege/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/privilege/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/xsxsgl/privilege/update.jsp</result>
+			<result name="action2action" type="redirectAction">roleAction_showRoles</result>
+			<result name="setRole">WEB-INF/jsp/xsxsgl/privilege/teacher_role.jsp</result>
+			<result name="setPrivilege">WEB-INF/jsp/xsxsgl/privilege/role_privilege.jsp</result>
+		</action>
+	</package>
+	<package name="roleJSON" namespace="/" extends="json-default">
+		<action name="roleJsonAction_*" method="{1}" class="roleAction">
+			<result name="success" type="json"></result>
+			<result name="roleFrame" type="json"></result>
+			<result name="roleJson" type="json"></result>
+		</action>
+	</package>
+</struts>

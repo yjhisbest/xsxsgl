@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="majorClass" namespace="/" extends="intercptor">
+		<action name="majorClassAction_*" method="{1}" class="majorClassAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/business/mcgx/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/business/mcgx/add.jsp</result>
+			<result name="action2action" type="redirectAction">majorClassAction_showMCGX</result>
+		</action>
+	</package>
+	<package name="majorClassJson" namespace="/" extends="json-default">
+		<action name="majorClassJsonAction_*" method="{1}" class="majorClassAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

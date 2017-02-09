@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="teacher" namespace="/" extends="intercptor">
+		<action name="teacherAction_*" method="{1}" class="teacherAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/basedata/teacher/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/basedata/teacher/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/xsxsgl/basedata/teacher/update.jsp</result>
+			<result name="personalMess">WEB-INF/jsp/xsxsgl/basedata/teacher/personalMess.jsp</result>
+			<result name="action2action" type="redirectAction">teacherAction_showPageResult</result>
+		</action>
+	</package>
+	<package name="teacherJSON" namespace="/" extends="json-default">
+		<action name="teacherJsonAction_*" method="{1}" class="teacherAction">
+			<result name="delJson" type="json"></result>
+		</action>
+	</package>
+</struts>

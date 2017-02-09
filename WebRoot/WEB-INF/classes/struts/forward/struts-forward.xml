@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="forward" namespace="/" extends="intercptor">
+		<action name="forwardAction_*" method="{1}" class="com.itheima11.xsxsgl.forward.action.ForwardAction">
+			<result name="top">WEB-INF/jsp/xsxsgl/frame/top.jsp</result>
+			<result name="center">WEB-INF/jsp/xsxsgl/frame/center.jsp</result>
+			<result name="left">WEB-INF/jsp/xsxsgl/frame/left.jsp</result>
+			<result name="right">WEB-INF/jsp/xsxsgl/frame/right.jsp</result>
+		</action>
+	</package>
+</struts>

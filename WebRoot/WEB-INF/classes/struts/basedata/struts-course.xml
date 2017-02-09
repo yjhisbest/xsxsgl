@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="course" namespace="/" extends="intercptor">
+		<action name="courseAction_*" method="{1}" class="courseAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/basedata/course/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/basedata/course/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/xsxsgl/basedata/course/update.jsp</result>
+			<result name="action2action" type="redirectAction">courseAction_showPageResult</result>
+		</action>
+	</package>
+	<package name="courseJSON" namespace="/" extends="json-default">
+		<action name="courseJsonAction_*" method="{1}" class="courseAction">
+			<result name="delJson" type="json"></result>
+		</action>
+	</package>
+</struts>

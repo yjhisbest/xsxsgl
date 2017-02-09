@@ -1,0 +1,4 @@
+jdbc.driverClassName=com.hxtt.sql.access.AccessDriver
+jdbc.url=jdbc\:access\:///f\:/work/access/xsxsgl.mdb
+jdbc.username=
+jdbc.password=

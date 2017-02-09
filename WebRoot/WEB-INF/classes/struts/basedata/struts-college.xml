@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="college" namespace="/" extends="intercptor">
+		<action name="collegeAction_*" method="{1}" class="collegeAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/basedata/college/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/basedata/college/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/xsxsgl/basedata/college/update.jsp</result>
+			<result name="action2action" type="redirectAction">collegeAction_showPageResult</result>
+		</action>
+	</package>
+	<package name="collegeJSON" namespace="/" extends="json-default">
+		<action name="collegeJsonAction_*" method="{1}" class="collegeAction">
+			<result name="delJson" type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="classCourse" namespace="/" extends="intercptor">
+		<action name="classCourseAction_*" method="{1}" class="classCourseAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/business/ccgx/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/business/ccgx/add.jsp</result>
+			<result name="action2action" type="redirectAction">classCourseAction_showCCGX</result>
+		</action>
+	</package>
+	<package name="classCourseJson" namespace="/" extends="json-default">
+		<action name="classCourseJsonAction_*" method="{1}" class="classCourseAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

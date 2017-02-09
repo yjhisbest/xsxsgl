@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0; padding:0; list-style:none; border:0; background:#ECF4FB; font-size:12px;}
+table,tr,td,input,ul,li{margin:0; padding:0; list-style:none; border:0;}
+/*wrap*/
+#wrap{width:980px; height:492px; padding:5px;}
+ul{padding-left:5px; height:22px; overflow:hidden;}
+li{float:left; line-height:20px; cursor:pointer; background:url(images/inven_tab_bg.png) repeat-x; border:1px solid #A0B3C6; border-bottom:0; width:54px; height:20px; text-align:center; margin-top:1px;}
+td .current{width:54px; height:21px; line-height:21px; border:1px solid #A0B3C6; border-bottom:0; background:#FFF; margin:0;}
+td span{float:right;}
+td span a{color:#000; margin-left:8px; display:inline-block; height:15px; line-height:15px;}
+span a:link,span a:visited{color:#000; text-decoration:none;}
+span a:hover{text-decoration:none; color:#666;}
+.inptxt{width:72px; height:16px; border:1px solid #898989; color:#C0C0C0; line-height:16px; padding:2px 3px;}
+.inpbtn{width:58px; height:22px; line-height:20px; border:1px solid #526173; margin-left:4px; border-radius:2px; background:#ECF4FB; color:#000; text-align:center; cursor:pointer;}
+.addin{background:url(../images/add.png) no-repeat left center; padding-left:18px;}
+.clear{background:url(../images/clear.png) no-repeat left center; padding-left:18px;}
+.tab{background:url(../images/programa.png) no-repeat left center; padding-left:24px;}
+.adv{background:url(../images/adv.png) no-repeat left center; padding-left:20px;}
+.maintain{background:url(../images/maintain.png) no-repeat left center; padding-left:20px;}
+.center td{height:19px; text-align:center; line-height:19px;  border-right:1px solid #9EB6CE; border-bottom:1px solid #9EB6CE;}
+.center .one{height:19px; background:url(../images/rig_cen_tab_bg.png);}
+.center .one td{text-align:center; border:1px solid #9EB6CE; border-left:0;}
+.btns{padding:10px 0;}
+.btns .up,.btns .down{width:30px; height:20px; line-height:20px; border:1px solid #9EB6CE; background:#ECF4FB; cursor:pointer; border-radius:2px;}
+.btns .up{margin:0 20px 0 216px;}
+.btns .down{margin-right:216px;}
+.btns span{margin-right:20px;}
+.btns span a{width:42px; height:20px; line-height:20px; display:inline-block;}
+.btns span .left{background:url(../images/left.png) no-repeat left center; padding-left:16px;}
+.btns span .right{background:url(../images/right.png) no-repeat right center; padding-right:16px;}
+.finish input{width:68px; height:20px; line-height:20px; border:1px solid #526173; background:#ECF4FB; cursor:pointer; border-radius:2px; margin:8px 10px 0 0;}

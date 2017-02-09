@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.itheima11.xsxsgl.domain.basedata.Teacher">
+		<id name="jsbh" length="20">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="password" length="100"></property>
+		<property name="jsmc" length="20"></property>
+		<property name="sex" length="2"></property>
+		<property name="age" length="2"></property>
+		<property name="jszc" length="20"></property>
+		<property name="cellphone" length="20"></property>
+		<set name="courses" cascade="save-update">
+			<key>
+				<column name="jsbh"></column>
+			</key>
+			<one-to-many class="com.itheima11.xsxsgl.domain.basedata.Course"/>
+		</set>
+		<set name="classes" table="teacher_class">
+			<key>
+				<column name="jsbh"></column>
+			</key>
+			<many-to-many column="bjbh" class="com.itheima11.xsxsgl.domain.basedata.Class"></many-to-many>
+		</set>
+		<many-to-one name="role"  
+		class="com.itheima11.xsxsgl.domain.privilege.Role" column="rid"></many-to-one>
+		<property name="rolename" length="20"></property>
+	</class>
+</hibernate-mapping>

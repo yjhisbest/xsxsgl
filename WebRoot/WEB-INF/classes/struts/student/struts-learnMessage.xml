@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="learnMessage" namespace="/" extends="intercptor">
+		<action name="learnMessageAction_*" method="{1}" class="learnMessageAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/business/student/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/business/student/addGrade.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/xsxsgl/business/student/update.jsp</result>
+			<result name="action2action" type="redirectAction">learnMessageAction_showPageResult</result>
+		</action>
+	</package>
+	<package name="learnMessageJSON" namespace="/" extends="json-default">
+		<action name="learnMessageJsonAction_*" method="{1}" class="learnMessageAction">
+			<result name="delJson" type="json"></result>
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

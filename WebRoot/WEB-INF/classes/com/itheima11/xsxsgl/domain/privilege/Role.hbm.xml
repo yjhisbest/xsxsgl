@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.itheima11.xsxsgl.domain.privilege.Role">
+		<id name="rid" type="java.lang.Long" length="5">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" length="20"></property>
+		<property name="description" length="255"></property>
+		<set name="teachers" cascade="all">
+			<key>
+				<column name="rid"></column>
+			</key>
+			<one-to-many class="com.itheima11.xsxsgl.domain.basedata.Teacher"/>
+		</set>
+		<set name="privileges" table="role_privilege">
+			<key>
+				<column name="rid"></column>
+			</key>
+			<many-to-many class="com.itheima11.xsxsgl.domain.privilege.Privilege" column="id"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

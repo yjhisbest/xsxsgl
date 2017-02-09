@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="classTeacher" namespace="/" extends="intercptor">
+		<action name="classTeacherAction_*" method="{1}" class="classTeacherAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/business/ctgx/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/business/ctgx/add.jsp</result>
+			<result name="action2action" type="redirectAction">classTeacherAction_showCTGX</result>
+		</action>
+	</package>
+	<package name="classTeacherJson" namespace="/" extends="json-default">
+		<action name="classTeacherJsonAction_*" method="{1}" class="classTeacherAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

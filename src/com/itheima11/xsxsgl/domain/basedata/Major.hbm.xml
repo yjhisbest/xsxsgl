@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.itheima11.xsxsgl.domain.basedata.Major">
+		<id name="mid" length="5">
+			<generator class="increment"></generator>
+		</id>
+		<property name="zymc" length="30"></property>
+		<property name="zylb" length="20"></property>
+		<many-to-one name="college" cascade="save-update"  
+		class="com.itheima11.xsxsgl.domain.basedata.College" column="id"></many-to-one>
+		<set name="classes" cascade="all">
+			<key>
+				<column name="mid"></column>
+			</key>
+			<one-to-many class="com.itheima11.xsxsgl.domain.basedata.Class"/>
+		</set>
+	</class>
+</hibernate-mapping>

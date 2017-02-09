@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.itheima11.xsxsgl.domain.basedata.Class">
+		<id name="bjbh" length="20">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="bjmc" length="30"></property>
+		<property name="number" length="3"></property>
+		<set name="students" cascade="all">
+			<key>
+				<column name="bjbh"></column>
+			</key>
+			<one-to-many class="com.itheima11.xsxsgl.domain.basedata.Student"/>
+		</set>
+		<many-to-one name="major" column="mid"
+		class="com.itheima11.xsxsgl.domain.basedata.Major"></many-to-one>
+		<set name="teachers" table="teacher_class" order-by="jsbh asc">
+			<key>
+				<column name="bjbh"></column>
+			</key>
+			<many-to-many column="jsbh" class="com.itheima11.xsxsgl.domain.basedata.Teacher"/>
+		</set>
+		<set name="courses" table="class_course">
+			<key>
+				<column name="bjbh"></column>
+			</key>
+			<many-to-many column="kcbh" class="com.itheima11.xsxsgl.domain.basedata.Course"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

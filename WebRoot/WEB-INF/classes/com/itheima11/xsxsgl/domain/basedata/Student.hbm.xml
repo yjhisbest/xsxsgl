@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.itheima11.xsxsgl.domain.basedata.Student">
+		<id name="xuehao" length="20">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="password" length="100"></property>
+		<property name="name" length="20"></property>
+		<property name="sex" length="2"></property>
+		<property name="csrq" type="date"></property>
+		<property name="statue" length="1"></property>
+		<property name="rxrq" type="date"></property>
+		<property name="cellphone" length="20"></property>
+		<property name="zzmm" length="20"></property>
+		<property name="syszd" length="150"></property>
+		<property name="yxxf" length="20"></property>
+		<many-to-one name="clazz" column="bjbh" class="com.itheima11.xsxsgl.domain.basedata.Class"></many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="studentLearnMess" namespace="/" extends="intercptor">
+		<action name="studentLearnMessAction_*" method="{1}" class="studentLearnMessAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/business/student/stuLearnList.jsp</result>
+		</action>
+	</package>
+	<package name="studentLearnMessJSON" namespace="/" extends="json-default">
+		<action name="studentLearnMessJsonAction_*" method="{1}" class="studentLearnMessAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

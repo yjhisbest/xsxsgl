@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+	body{margin:0; padding:0; font-size:12px; background:#ECF4FB;}
+	table,tr,td,input,h5{margin:0; padding:0; list-style:none; border:0;}
+	/*点击提示的div*/
+	#seek{width:100%; height:100%; background:url(../images/seek-bg.png); padding:5px; margin:0 auto; position:absolute; top:0px; left:0px; z-index:999px; padding:50px 0 0 100px; display:none;}
+	.seek_con{width:800px; overflow:hidden; padding:10px 20px; background:#ECF4FB; border:2px solid #d4d0c8; border-top:0;}
+	.seek_con_top{height:30px; border:1px solid #d4d0c8; width:840px; background:#7594ba; border:2px solid #d4d0c8; border-bottom:0; line-height:30px;}
+	.seek_con_top h5{color:#FFF; font-size:16px; padding-left:20px; background:url(../images/top_bot_logo.png) no-repeat left center; margin-left:8px; float:left;}
+	.seek_con_top .seek_close{float:right; background:url(../images/close.png) no-repeat; display:block; width:16px; height:14px; margin:8px 4px 0 0; cursor:pointer;}
+	.seek_top{height:30px; padding:7px 5px 0; width:800px;}
+	.seek_top input.seek_inp{width:78px; height:18px; border:1px solid #CCC; float:left;}
+	.seek_top span{float:right;}
+	.seek_top span a{color:#000; margin-left:8px; display:inline-block; height:15px; line-height:15px;}
+	.seek_top span a:link,.top span a:visited{color:#000; text-decoration:none;}
+	.seek_top span a:hover{text-decoration:none; color:#666;}
+	.seek_top span .clear{background:url(../images/clear.png) no-repeat left 0; padding-left:15px;}
+	.seek_top span .programa{background:url(../images/programa.png) no-repeat left center; padding-left:18px;}
+	/*table tr{border:1px solid #9EB6CE; height:19px;}*/
+	.num_1{width:35px;}
+	.num_2,.num_3{width:373px;}
+	.num_1_1{text-align:center; background:#F4FEFF; border-bottom:1px solid #D0D7E5; border-right:1px solid #D0D7E5;}
+	.num_2_1,.num_3_1{background:#FFF; border-right:1px solid #D0D7E5; border-bottom:1px solid #D0D7E5; padding-left:5px; cursor:pointer;}
+	.btns button{float:right; margin:15px 15px 0 0; width:68px; height:20px; border:1px solid #526173; background:#ECF4FB; cursor:pointer; border-radius:2px; margin-right:10px; cursor:pointer;}

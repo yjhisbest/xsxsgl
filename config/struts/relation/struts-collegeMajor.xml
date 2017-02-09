@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="collegeMajor" namespace="/" extends="intercptor">
+		<action name="collegeMajorAction_*" method="{1}" class="collegeMajorAction">
+			<result name="listAction">WEB-INF/jsp/xsxsgl/business/cmgx/list.jsp</result>
+			<result name="addUI">WEB-INF/jsp/xsxsgl/business/cmgx/add.jsp</result>
+			<result name="action2action" type="redirectAction">collegeMajorAction_showCMGX</result>
+		</action>
+	</package>
+	<package name="collegeMajorJson" namespace="/" extends="json-default">
+		<action name="collegeMajorJsonAction_*" method="{1}" class="collegeMajorAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>
